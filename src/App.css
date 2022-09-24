@@ -1,0 +1,194 @@
+* {
+  box-sizing: border-box;
+}
+/* General Selectors */
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  font-family: "Inter", sans-serif;
+  background-color: #f5f7fb;
+  color: #293264;
+  display: flex;
+  background-image: url("../public/bob-blue.svg");
+  background-repeat: no-repeat;
+  background-position: -20% 110%;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+hr {
+  width: 100%;
+  margin: 15px 0;
+  border: #dbdef0 solid 0.7px;
+}
+
+select {
+  background-color: #ffffff;
+  border-radius: 10px;
+  color: #282d35;
+  padding: 10px 20px;
+  margin-bottom: 15px;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  border: solid #293264 1px;
+}
+
+option {
+  background-color: #282d35;
+  color: #ffffff;
+  font-weight: 700;
+  font-family: "Karla", sans-serif;
+}
+
+/* All Parents need 100% hight and width so they will recah the full screen */
+
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+.app__container {
+  background-image: url("../public/blob-yellow.svg");
+  background-repeat: no-repeat;
+  background-position: 100% -25%;
+  padding: 40px;
+}
+/* Pending Screen */
+
+.pending-screen__container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.pending-screen__container__h1 {
+  margin: 0;
+  margin-bottom: 15px;
+  color: #293264;
+}
+
+.pending-screen__container__start-game-btn {
+  padding: 15px 30px;
+  background: #4d5b9e;
+  color: #f5f7fb;
+  border-radius: 15px;
+  border: none;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+/* Question Container */
+
+.app__question__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 700px;
+}
+
+.question-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.question__container__heading {
+  font-family: "Karla", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.question__container__answer-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.question__answer {
+  padding: 5px;
+  border: 0.771045px solid #4d5b9e;
+  border-radius: 7.71045px;
+  margin-right: 13px;
+  margin-bottom: 8px;
+  font-size: 10.24px;
+  line-height: 12px;
+}
+
+.question__answer:hover {
+  cursor: pointer;
+}
+
+.app__question__container__p {
+  font-weight: 700;
+  font-size: 12.8px;
+}
+
+.app__question__container__new-game-btn {
+  background: #4d5b9e;
+  border-radius: 10px;
+  color: #f5f7fb;
+  border: none;
+  padding: 11px 20px;
+  margin-top: 20px;
+}
+
+@media (min-width: 900px) {
+  .app__container {
+    background-position: 100% 20%;
+  }
+
+  .pending-screen__container__h1 {
+    font-size: 3.5rem;
+  }
+
+  .pending-screen__container__p {
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+  }
+
+  .pending-screen__container__start-game-btn {
+    padding: 15px 30px;
+    font-size: 1rem;
+  }
+
+  .question__answer {
+    font-size: 1rem;
+    line-height: 1.1rem;
+  }
+
+  .question__container__heading {
+    font-size: 1.5rem;
+    line-height: 1.6rem;
+  }
+
+  .app__question__container__p {
+    font-size: 1.1rem;
+  }
+}
+
+@media (min-height: 600px) {
+  .app__container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 900px) and (orientation: landscape) {
+  body {
+    background-position: 10% 90%;
+  }
+}
